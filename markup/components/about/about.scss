@@ -1,0 +1,19 @@
+.about-code{
+  padding: 60px 150px;
+  background-color: $colorBlock;
+  text-align: center;
+  &__container{
+    @include cc;
+  }
+  &__title{
+    @include fs(30px);
+    margin: 0 0 30px;
+    color: $colorTitle;
+  }
+  &__text{
+    @include fs(15px);
+    line-height: 1.6;
+    color: $colorText;
+    padding: 0 130px;
+  }
+}

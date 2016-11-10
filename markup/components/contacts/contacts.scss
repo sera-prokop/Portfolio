@@ -1,0 +1,59 @@
+.contacts{
+  background:  url('%=static=%assets/contacts/contact-bg.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  padding: 50px 0 70px;
+  text-align: center;
+  &__container{
+    @include cc;
+  }
+  &__title{
+    @include fs(30px);
+    margin: 0 0 30px;
+    color: white;
+  }
+  &__text{
+    @include fs(15px);
+    line-height: 1.6;
+    color: $colorText;
+  }
+  &__form{
+  }
+  &__input, &__textarea{
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 555px;
+    width: 100%;
+    padding: 20px 15px;
+    border: 1px solid $colorText;
+    color: $colorText;
+    @include fs(13px);
+    background-color: transparent;
+    &:focus{
+      outline: none;
+      border: 1px solid darken($colorText, 10%);
+    }
+  }
+  &__textarea{
+    margin-bottom: 35px;
+    height: 160px;
+    resize: none;
+  }
+  &__button{
+    max-width: 555px;
+    width: 100%;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    @include fs(17px);
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    &:hover{
+      border: 1px solid darken($blue, 10%);
+    }
+    &:active{
+      outline: none;
+      border: 1px solid darken($blue, 20%);
+    }
+  }
+}

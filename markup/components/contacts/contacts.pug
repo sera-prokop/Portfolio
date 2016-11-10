@@ -1,0 +1,10 @@
+mixin contacts(data)
+    section.contacts
+      .contacts__container
+        h2.contacts__title Свяжитесь со мной
+        p.contacts__text Отвечу на все интересующие вопросы
+        form.contacts__form(method='post')
+          input.contacts__input(type="text" placeholder="Представьтесь, пожалуйста")
+          input.contacts__input(type="text" placeholder="E-mail")
+          textarea.contacts__textarea(placeholder="Ваше сообщение")
+          button.contacts__button(type="submit") Отправить

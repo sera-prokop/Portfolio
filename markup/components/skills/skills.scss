@@ -1,0 +1,39 @@
+.skills{
+  @include cc;
+  padding: 65px 0;
+  &__list{
+    @include nl;
+    display: flex;
+    align-content: space-around;
+    text-align: center;
+  }
+  &__item{
+    margin-left: 50px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__icon{
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, rgba(72,185,255,1) 0%, rgba(72,185,255,1) 50%, rgba(95,194,255,1) 51%, rgba(95,194,255,1) 100%);
+  }
+  &__svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  &__title{
+    @include fs(22px);
+    color: $colorTitle;
+    margin: 30px 0 20px;
+  }
+  &__desc{
+    @include fs(15px);
+    color: $colorText;
+    line-height: 1.47;
+  }
+}

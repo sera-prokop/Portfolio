@@ -1,0 +1,16 @@
+mixin footer(data)
+    footer.footer
+      p.footer__desc © 2016 Фрилансер веб-разработчик
+      ul.footer__social
+        li.footer__item
+          a(href="https://vk.com/sera.prokop").footer__link Вконтакте
+            != pugHelpers.Icon.call(locals, {iconName: 'vk', className: 'footer__svg', iconWidth: '17', iconHeight: '17'})
+        li.footer__item
+          a(href="https://github.com/sera-prokop").footer__link Github
+            != pugHelpers.Icon.call(locals, {iconName: 'github', className: 'footer__svg', iconWidth: '20', iconHeight: '20'})
+        li.footer__item
+          a(href="https://www.facebook.com/sergey.prokopenya").footer__link Facebook
+            != pugHelpers.Icon.call(locals, {iconName: 'fb', className: 'footer__svg', iconWidth: '17', iconHeight: '17'})
+        li.footer__item
+          a(href="https://plus.google.com/105879178505130202805").footer__link Google+
+            != pugHelpers.Icon.call(locals, {iconName: 'google', className: 'footer__svg', iconWidth: '17', iconHeight: '17'})

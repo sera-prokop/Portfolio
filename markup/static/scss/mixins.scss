@@ -1,0 +1,55 @@
+// Mixins.
+
+@mixin nl {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@mixin blocks-justify {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+
+@mixin cc {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// rem mixin
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+@mixin fs($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+
+  overflow: hidden;
+}

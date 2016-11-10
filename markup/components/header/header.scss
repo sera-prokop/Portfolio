@@ -1,0 +1,47 @@
+.header{
+  &__logo{
+    @include cc;
+    padding: 30px 0;
+  }
+  &__about{//header__about
+    background:  url('%=static=%assets/header/header-bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+  }
+  &__container{
+    @include cc;
+    text-align: center;
+  }
+  &__title{
+    text-align: center;
+    margin: 0 0 35px;
+    padding: 200px 40px 30px;
+    border-bottom: 2px solid $blue;
+    @include fs(50px);
+    display: inline-block;
+    font-family: $latobold;
+    color: white;
+    text-transform: uppercase;
+  }
+  &__desc{
+    margin: 0 0 60px;
+    @include fs(17px);
+    color: white;
+  }
+  &__link{
+    padding: 15px 50px;
+    display: inline-block;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    @include fs(17px);
+    color: white;
+    margin-bottom: 200px;
+    text-decoration: none;
+    &:hover{
+      border: 1px solid darken($blue, 10%);
+    }
+    &:active{
+      outline: none;
+      border: 1px solid darken($blue, 20%);
+    }
+  }
+}

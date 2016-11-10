@@ -1,0 +1,19 @@
+mixin skills(data)
+  section.skills
+    ul.skills__list
+      li.skills__item
+        .skills__icon
+          != pugHelpers.Icon.call(locals, {iconName: 'coding', className: 'skills__svg', iconWidth: '50', iconHeight: '50'})
+        h3.skills__title Кроссбраузерность
+        p.skills__desc Идентичная работа и отображение сайта во всех браузерах (включая IE8+)
+      li.skills__item
+        .skills__icon
+          != pugHelpers.Icon.call(locals, {iconName: 'smartphone', className: 'skills__svg', iconWidth: '50', iconHeight: '50'})
+        h3.skills__title Адаптивная верстка
+        p.skills__desc Адаптивная верстка позволяет просматривать сайт как на компьютере, так и на моб.устройствах
+      li.skills__item
+        .skills__icon
+          != pugHelpers.Icon.call(locals, {iconName: 'css', className: 'skills__svg', iconWidth: '50', iconHeight: '50'})
+        h3.skills__title Современные техники
+        p.skills__desc Владение HTML5 и CSS3, JavaScript, JQuery, Pug, Jade, SASS/SCSS, БЭМ, SVG, Gulp, Git
+

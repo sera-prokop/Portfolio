@@ -1,0 +1,31 @@
+.footer{
+  @include cc;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  &__desc{
+    margin: auto 0;
+    @include fs(15px);
+    color: $colorText;
+  }
+  &__social{
+    margin: auto 0;
+    @include nl;
+  }
+  &__item{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+  }
+  &__link{
+    font-size: 0;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: $blue;
+  }
+  &__svg{
+    margin: auto;
+  }
+}

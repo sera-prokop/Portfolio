@@ -1,0 +1,72 @@
+.works{
+  text-align: center;
+  background-color: $colorBlock;
+  padding:65px 0 100px;
+  &__container{
+    @include cc;
+  }
+  &__title{
+    @include fs(30px);
+    margin: 0 0 30px;
+    color: $colorTitle;
+  }
+  &__text{
+    @include fs(15px);
+    line-height: 1.6;
+    color: $colorText;
+    margin-bottom: 40px;
+  }
+  &__list{
+    @include nl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 32%;
+    width: 100%;
+    margin-bottom: 17px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 260px;
+    border: 1px solid #aaa;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out;
+    }
+    &:hover:before{
+      opacity: 0.7;
+    }
+    &:hover .works__link{
+      opacity: 1;
+    }
+  }
+  &__link{
+    //content: 'Подробнее';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+    padding: 15px 50px;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    @include fs(17px);
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    &:after{
+
+    }
+    //&:hover:after{
+    //  opacity: 1;
+    //}
+  }
+}
