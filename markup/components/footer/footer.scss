@@ -1,3 +1,6 @@
+.page__footer{
+  padding: 0 10px;
+}
 .footer{
   @include cc;
   display: flex;
@@ -24,6 +27,9 @@
     width: 40px;
     height: 40px;
     background-color: $blue;
+    &:hover{
+      background-color: darken($blue, 10%);
+    }
   }
   &__svg{
     margin: auto;

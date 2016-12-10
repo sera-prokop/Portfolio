@@ -1,0 +1,58 @@
+@media screen and (max-width: 767px){
+  html{
+    font-size: 14px;
+  }
+
+  .header{
+    &__container{
+      padding: 50px 10px 70px;
+    }
+    &__title{
+      @include fs(30px);
+      padding: 0 20px 15px;
+    }
+  }
+
+  .about-code{
+    padding: 30px 25px;
+  }
+
+  .skills{
+    padding: 30px 10px;
+    &__list{
+      flex-direction: column;
+    }
+    &__item{
+      margin: 0;
+    }
+  }
+
+  .works{
+    padding: 30px 10px 50px;
+    &__item{
+      max-width: 49%;
+    }
+  }
+
+  .contacts{
+    padding: 30px 10px 40px;
+  }
+
+  .footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__social{
+      order: -1;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .works{
+    &__item{
+      max-width: 100%;
+    }
+  }
+}

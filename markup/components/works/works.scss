@@ -1,7 +1,7 @@
 .works{
   text-align: center;
   background-color: $colorBlock;
-  padding:65px 0 100px;
+  padding:65px 10px 100px;
   &__container{
     @include cc;
   }
@@ -29,7 +29,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    height: 260px;
+    max-height: 225px;
     border: 1px solid #aaa;
     &:before{
       content: '';
@@ -45,6 +45,9 @@
     }
     &:hover .works__link{
       opacity: 1;
+    }
+    img{
+      vertical-align: middle;
     }
   }
   &__link{
