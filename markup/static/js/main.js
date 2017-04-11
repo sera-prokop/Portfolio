@@ -1,18 +1,5 @@
 'use strict';
-
+const contact = require('components/contacts/contacts');
 $( document ).ready(function() {
-  
-  // const contact = require('components/contacts/contacts');
-  const contact = require('components/contacts/contacts');
-  
-  
+  contact.init();
 });
-
-
-  
-
-
-
-/*
-    This file can be used as entry point for webpack!
- */

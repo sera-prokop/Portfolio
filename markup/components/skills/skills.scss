@@ -13,6 +13,23 @@
     &:first-child{
       margin-left: 0;
     }
+    &:nth-child(1){
+      &:hover svg{
+        animation: flip 1s;
+        animation-fill-mode: both;
+        backface-visibility: visible;
+      }
+    }
+    &:nth-child(2){
+      &:hover svg{
+        animation: wobble 1s;
+      }
+    }
+    &:nth-child(3){
+      &:hover svg{
+        animation: tada 1s;
+      }
+    }
   }
   &__icon{
     margin: 0 auto;
@@ -33,5 +50,85 @@
     @include fs(15px);
     color: $colorText;
     line-height: 1.47;
+  }
+}
+
+
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -359deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 50px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 50px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0, 0, 0);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
   }
 }
