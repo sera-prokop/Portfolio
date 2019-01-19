@@ -24,14 +24,17 @@
     margin: 0 auto 20px;
     max-width: 555px;
     width: 100%;
-    padding: 20px 15px;
+    padding: 15px 15px;
     border: 1px solid $colorText;
     color: $colorText;
-    @include fs(13px);
+    @include fs(16px);
     background-color: transparent;
     &:focus{
       outline: none;
       border: 1px solid darken($colorText, 10%);
+    }
+    &.error{
+      border-color: darkred;
     }
   }
   &__textarea{

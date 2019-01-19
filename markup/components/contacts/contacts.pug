@@ -5,6 +5,6 @@ mixin contacts(data)
         p.contacts__text Отвечу на все интересующие вопросы
         form.contacts__form(action="send.php" method="post")
           input.contacts__input(type="text" name="name" placeholder="Представьтесь, пожалуйста" required)
-          input.contacts__input(type="text" name="mail" placeholder="E-mail" required)
+          input.contacts__input(type="email" name="mail" placeholder="E-mail" required)
           textarea.contacts__textarea(name="comment" placeholder="Ваше сообщение")
           button.contacts__button(type="submit" name="submit") Отправить
