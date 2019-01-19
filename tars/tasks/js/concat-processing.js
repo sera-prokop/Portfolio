@@ -14,7 +14,7 @@ const path = require('path');
 let generateSourceMaps = false;
 const staticFolderName = tars.config.fs.staticFolderName;
 const destFolder = `./dev/${staticFolderName}/js`;
-const compressJs = tars.flags.release || tars.flags.min;
+const compressJs = tars.flags.release || tars.flags.min || tars.flags.m;
 const sourceMapsDest = tars.config.sourcemaps.js.inline ? '' : '.';
 const jsPaths = [].concat.apply([], [
     `!./markup/${tars.config.fs.componentsFolderName}/**/data/data.js`,
@@ -41,9 +41,7 @@ const jsPaths = [].concat.apply([], [
  */
 function base() {
     return streamCombiner(
-        gulpif(tars.config.js.useBabel, tars.require('gulp-babel')({
-            babelrc: path.resolve(cwd + '/.babelrc')
-        })),
+        gulpif(tars.config.js.useBabel, tars.require('gulp-babel')()),
         concat({cwd: cwd, path: 'main.js'}),
         rename({ suffix: tars.options.build.hash }),
         gulpif(generateSourceMaps, sourcemaps.write(sourceMapsDest)),

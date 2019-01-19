@@ -1,8 +1,22 @@
 .header{
-  &__logo{
-    box-sizing: border-box;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @include cc;
     padding: 30px 10px;
+  }
+  &__logo{
+    box-sizing: border-box;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    @include nl;
+    @include fs(18px);
+  }
+  &__link{
+
   }
   &__about{//header__about
     background:  url('%=static=%assets/header/header-bg.jpg') 50% 50% no-repeat;
@@ -30,7 +44,7 @@
     @include fs(17px);
     color: white;
   }
-  &__link{
+  &__about-link{
     padding: 15px 50px;
     display: inline-block;
     border: 1px solid $blue;

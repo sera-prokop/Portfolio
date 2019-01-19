@@ -37,7 +37,7 @@ module.exports = {
         }
     },
     "notifyConfig": {
-        "useNotify": true,
+        "useNotify": false,
         "title": "TARS notification",
         "sounds": {},
         "taskFinishedText": "Task finished at: "
@@ -57,6 +57,5 @@ module.exports = {
         "staticFolderName": "static",
         "imagesFolderName": "img",
         "componentsFolderName": "components"
-    },
-    "staticPrefix": "static/"
+    }
 };

@@ -1,9 +1,18 @@
 mixin header(data)
     header.header
-      .header__logo
-        img(src="%=static=%img/assets/header/logo.png" alt="Logo")
-      .header__about
-        .header__container
-          h1.header__title Сергей Прокопеня
-          p.header__desc Фронтенд-разработчик
-          a(href="http://jobs.tut.by/resume/ed7b0cefff0306f4e90039ed1f35725145536c").header__link Резюме
+        .header__top
+            .header__logo
+                img(src="%=static=%img/assets/header/logo.png" alt="Logo")
+            nav.header__nav
+                ul.header__list
+                    li.header__item
+                        a(href="#").header__link Обо мне
+                    li.header__item
+                        a(href="#").header__link Портфолио
+                    li.header__item
+                        a(href="#").header__link Контакты
+        .header__about
+            .header__container
+                h1.header__title Сергей Прокопеня
+                p.header__desc Фронтенд-разработчик
+                a(href="http://jobs.tut.by/resume/ed7b0cefff0306f4e90039ed1f35725145536c").header__about-link Резюме

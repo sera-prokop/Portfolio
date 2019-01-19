@@ -89,7 +89,7 @@ if (!tars.flags.ie9 && !tars.flags.ie) {
 patterns.push(
     {
         match: '%=min=%',
-        replacement: tars.flags.min || tars.flags.release ? '.min' : ''
+        replacement: tars.flags.min || tars.flags.release || tars.flags.m ? '.min' : ''
     }, {
         match: '%=hash=%',
         replacement: tars.flags.release ? tars.options.build.hash : ''
@@ -160,7 +160,7 @@ function jadeAndPugInheritanceProcessing() {
             tars.require(`gulp-${templaterName}-inheritance`)(inheritanceOptions),
             tars.helpers.filterFilesByPath([
                 new RegExp(`\/markup\/${tars.config.fs.componentsFolderName}\/`),
-                /_[\w]+.(jade|pug)/
+                /^_[\w]+.(jade|pug)/
             ])
         );
     }
