@@ -3,17 +3,20 @@ mixin header(data)
         .header__wrapper
             .header__top
                 .header__logo
-                    img(src="%=static=%img/assets/header/logo.png" alt="Logo")
+                    a(href="#resume")
+                        img(src="%=static=%img/assets/header/logo.png" alt="Logo")
                 nav.header__nav
                     ul.header__list
+                        li.header__item
+                            a(href="#resume").header__link Резюме
                         li.header__item
                             a(href="#about").header__link Обо мне
                         li.header__item
                             a(href="#portfolio").header__link Портфолио
                         li.header__item
                             a(href="#contacts").header__link Контакты
-        .header__about
+        #resume.header__about
             .header__container
                 h1.header__title Сергей Прокопеня
                 p.header__desc Фронтенд-разработчик
-                a(href="http://jobs.tut.by/resume/ed7b0cefff0306f4e90039ed1f35725145536c").header__about-link Резюме
+                a(href="https://hh.ru/resume/ed7b0cefff0306f4e90039ed1f35725145536c" target="_blank").header__about-link Резюме
