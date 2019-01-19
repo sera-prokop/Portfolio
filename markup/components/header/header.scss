@@ -29,7 +29,8 @@
     text-decoration: none;
     color: #000;
     transition: color $tr;
-    &:hover{
+    outline: none;
+    &:hover, &:focus{
       color: $blue;
     }
   }
@@ -69,7 +70,8 @@
     color: white;
     text-decoration: none;
     transition: $tr;
-    &:hover{
+    outline: none;
+    &:hover, &:focus{
       border: 1px solid darken($blue, 10%);
     }
     &:active{

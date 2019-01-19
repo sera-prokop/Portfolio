@@ -1,1 +1,6 @@
+module.exports = {
+  init: function () {
+
+  }
+};
 

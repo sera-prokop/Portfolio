@@ -28,7 +28,8 @@
     height: 40px;
     background-color: $blue;
     transition: $tr;
-    &:hover{
+    outline: none ;
+    &:hover, &:focus{
       background-color: darken($blue, 10%);
     }
   }
