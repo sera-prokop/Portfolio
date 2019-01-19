@@ -1,16 +1,17 @@
 mixin header(data)
     header.header
-        .header__top
-            .header__logo
-                img(src="%=static=%img/assets/header/logo.png" alt="Logo")
-            nav.header__nav
-                ul.header__list
-                    li.header__item
-                        a(href="#").header__link Обо мне
-                    li.header__item
-                        a(href="#").header__link Портфолио
-                    li.header__item
-                        a(href="#").header__link Контакты
+        .header__wrapper
+            .header__top
+                .header__logo
+                    img(src="%=static=%img/assets/header/logo.png" alt="Logo")
+                nav.header__nav
+                    ul.header__list
+                        li.header__item
+                            a(href="#about").header__link Обо мне
+                        li.header__item
+                            a(href="#portfolio").header__link Портфолио
+                        li.header__item
+                            a(href="#contacts").header__link Контакты
         .header__about
             .header__container
                 h1.header__title Сергей Прокопеня

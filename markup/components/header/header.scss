@@ -1,4 +1,11 @@
 .header{
+  &__wrapper{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   &__top{
     display: flex;
     justify-content: space-between;
@@ -16,11 +23,18 @@
     @include fs(18px);
   }
   &__link{
-
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    transition: color $tr;
+    &:hover{
+      color: $blue;
+    }
   }
   &__about{//header__about
     background:  url('%=static=%assets/header/header-bg.jpg') 50% 50% no-repeat;
     background-size: cover;
+    margin-top: 100px;
   }
   &__container{
     box-sizing: border-box;
@@ -52,6 +66,7 @@
     @include fs(17px);
     color: white;
     text-decoration: none;
+    transition: $tr;
     &:hover{
       border: 1px solid darken($blue, 10%);
     }

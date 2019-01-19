@@ -27,6 +27,7 @@
     width: 40px;
     height: 40px;
     background-color: $blue;
+    transition: $tr;
     &:hover{
       background-color: darken($blue, 10%);
     }

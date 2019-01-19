@@ -48,6 +48,7 @@
     background-color: transparent;
     color: white;
     padding: 20px 0;
+    transition: $tr;
     &:hover{
       border: 1px solid darken($blue, 10%);
     }
