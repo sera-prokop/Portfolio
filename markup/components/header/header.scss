@@ -14,15 +14,33 @@
     align-items: center;
     @include cc;
     padding: 30px 10px;
+    @media screen and (max-width: 767px){
+      flex-wrap: wrap;
+    }
   }
   &__logo{
     box-sizing: border-box;
+    @media screen and (max-width: 767px){
+      width: 100%;
+      text-align: center;
+      //margin-bottom: 20px;
+    }
+  }
+  &__nav{
+    @media screen and (max-width: 767px){
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
   }
   &__list{
     display: flex;
     align-items: center;
     @include nl;
     @include fs(18px);
+    @media screen and (max-width: 767px){
+      justify-content: center;
+    }
   }
   &__link{
     padding: 10px 20px;

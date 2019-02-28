@@ -1,5 +1,13 @@
 module.exports = {
   init: function () {
+
+    var headerTop = $('.header__top'),
+        headerTopHeight = headerTop.innerHeight(),
+        headerAbout = $('.header__about');
+    headerAbout.css({
+      marginTop: headerTopHeight
+    });
+
     var headerLink = $('.header__link, .header__logo a');
     headerLink.on('click keypress', function (e) {
       e.preventDefault();
@@ -15,7 +23,6 @@ module.exports = {
       }
 
     });
-
   }
 };
 
