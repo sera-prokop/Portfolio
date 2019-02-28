@@ -13,7 +13,7 @@
         <meta name="HandheldFriendly" content="true">
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/main68ipi.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/main.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <meta property="og:title" content="#{data.title}">
         <meta property="og:title" content="">
@@ -74,7 +74,7 @@
                     <li class="skills__item">
                         <div class="skills__icon">
                             <svg class="skills__svg" width="50" height="50">
-                                <use xlink:href="svg-symbols68ipi.svg#coding"></use>
+                                <use xlink:href="svg-symbols.svg#coding"></use>
                             </svg>
 
                         </div>
@@ -84,7 +84,7 @@
                     <li class="skills__item">
                         <div class="skills__icon">
                             <svg class="skills__svg" width="50" height="50">
-                                <use xlink:href="svg-symbols68ipi.svg#smartphone"></use>
+                                <use xlink:href="svg-symbols.svg#smartphone"></use>
                             </svg>
 
                         </div>
@@ -94,7 +94,7 @@
                     <li class="skills__item">
                         <div class="skills__icon">
                             <svg class="skills__svg" width="50" height="50">
-                                <use xlink:href="svg-symbols68ipi.svg#css"></use>
+                                <use xlink:href="svg-symbols.svg#css"></use>
                             </svg>
 
                         </div>
@@ -149,25 +149,25 @@
                 <ul class="footer__social">
                     <li class="footer__item"><a class="footer__link" href="https://t.me/sera_prokop" target="_blank">Telegram
             <svg class="footer__svg" width="17" height="17">
-                <use xlink:href="svg-symbols68ipi.svg#telegram"></use>
+                <use xlink:href="svg-symbols.svg#telegram"></use>
             </svg>
         </a>
                     </li>
                     <li class="footer__item"><a class="footer__link" href="https://vk.com/sera.prokop" target="_blank">Вконтакте
             <svg class="footer__svg" width="17" height="17">
-                <use xlink:href="svg-symbols68ipi.svg#vk"></use>
+                <use xlink:href="svg-symbols.svg#vk"></use>
             </svg>
         </a>
                     </li>
                     <li class="footer__item"><a class="footer__link" href="https://github.com/sera-prokop" target="_blank">Github
             <svg class="footer__svg" width="20" height="20">
-                <use xlink:href="svg-symbols68ipi.svg#github"></use>
+                <use xlink:href="svg-symbols.svg#github"></use>
             </svg>
         </a>
                     </li>
                     <li class="footer__item"><a class="footer__link" href="https://www.facebook.com/sergey.prokopenya" target="_blank">Facebook
             <svg class="footer__svg" width="17" height="17">
-                <use xlink:href="svg-symbols68ipi.svg#fb"></use>
+                <use xlink:href="svg-symbols.svg#fb"></use>
             </svg>
         </a>
                     </li>
@@ -178,7 +178,27 @@
         <script>
             svg4everybody();
         </script>
-        <script src="static/js/main68ipi.min.js"></script>
+        <script src="static/js/main.js"></script>
+        <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){m[i]=m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+              };
+              m[i].l=1 * new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+              (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+              
+              ym(52593610, "init", {
+              id:52593610,
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+              });
+        </script>
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/52593610" style="position:absolute; left:-9999px;" alt="">
+            </div>
+        </noscript>
     </body>
 
 </html>
