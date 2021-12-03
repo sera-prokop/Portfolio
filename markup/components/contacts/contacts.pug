@@ -1,10 +1,27 @@
 mixin contacts(data)
     section#contacts.contacts
-      .contacts__container
-        h2.contacts__title Свяжитесь со мной
-        p.contacts__text Отвечу на все интересующие вопросы
-        form.contacts__form(action="send.php" method="post")
-          input.contacts__input(type="text" name="name" placeholder="Представьтесь, пожалуйста" required)
-          input.contacts__input(type="email" name="mail" placeholder="E-mail" required)
-          textarea.contacts__textarea(name="comment" placeholder="Ваше сообщение")
-          button.contacts__button(type="submit" name="submit") Отправить
+        .contacts__container
+            h2.contacts__title Свяжитесь со мной
+            p.contacts__text Отвечу на все интересующие вопросы
+            form.contacts__form(action="send.php" method="post")
+                input.contacts__check(name="check" type="hidden" value="")
+                input.contacts__input(type="text" name="name" placeholder="Представьтесь, пожалуйста" required)
+                input.contacts__input(type="email" name="mail" placeholder="E-mail" required)
+                textarea.contacts__textarea(name="comment" placeholder="Ваше сообщение")
+                button.contacts__button(type="submit" name="submit") Отправить
+
+        //-script.
+            (function () {
+                function handler(e) {
+                    var elem = e.target;
+                    var parent = elem.parentElement;
+                    var checkInput = parent.getElementsByClassName("contacts__check")[0];
+                    checkInput.value = "secretcode";
+                    console.log(checkInput.value);
+                }
+
+                var buttons = document.getElementsByClassName("contacts__button");
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].onclick = handler;
+                }
+            })();
